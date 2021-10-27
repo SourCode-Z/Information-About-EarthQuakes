@@ -3,8 +3,8 @@
 
 '''
 Gempa - Info gempa from bmkg.go.id
-This project was created by Dfv47 with Black Coder Crush. 
-Copyright 22 - 12 - 2k19 @m_d4fv
+This project was writted by Meow404
+Copyright 24 - 02 - 2k21
 '''
 
 import requests, xml.dom.minidom as xmlget, os, time
@@ -21,15 +21,15 @@ n='\033[0;00m'
 def banner():
     os.system('clear')
     print (y+"  _____  "+r+"{ "+a+"Python script "+r+"}                                   ")
-    print (y+" |   __|___ _____ ___ ___  "+w+"Author "+r+": "+w+"M Daffa                  ")
-    print (y+" |  |  | -_|     | . | .'| "+w+"Team   "+r+": "+w+"Black Coder Crush        ")
-    print (y+" |_____|___|_|_|_|  _|__,| "+w+"Github "+r+": "+w+"https://github.com/md4fv ")
-    print (y+"                 |_| "+r+"* "+a+"Check info gempa from bmkg.go.id           ")
+    print (y+" |   __|___ _____ ___ ___  "+w+"Author "+r+": "+w+"PenencuriCode - Meow404                  ")
+    print (y+" |  |  | -_|     | . | .'| "+w+"Team   "+r+": "+w+"IndoXploit        ")
+    print (y+" |_____|___|_|_|_|  _|__,| "+w+"Github "+r+": "+w+"https://github.com/penecuriCode ")
+    print (y+"                 |_| "+r+"* "+a+"Check info gempa dari bmkg.go.id           ")
     print (r+'\n Loading please wait..from bmkg.go.id..')
     time.sleep(3)
 
 def main():
-    response  = requests.get('http://data.bmkg.go.id/autogempa.xml')
+    response  = requests.get('https://data.bmkg.go.id/DataMKG/TEWS/autogempa.xml')
     result    = response.text
     save      = open('result.xml', 'w')
     save.write('%s' % result)
